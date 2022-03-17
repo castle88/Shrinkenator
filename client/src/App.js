@@ -43,8 +43,24 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try{
-      console.log(form)
-      handleMessage('hello')
+      if(url === ''){
+        return handleMessage('please enter a url')
+      }
+      if(name === ''){
+        return handleMessage('please enter a nickname for your url')
+      }
+
+      const res = await fetch('http://localhost:2121/link', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          url,
+          name
+        })
+      })
+      const data = await res.json()
+      console.log(data)
+
     }catch(err){
       console.log(err)
       handleMessage(err.message)
