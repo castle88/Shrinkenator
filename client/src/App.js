@@ -77,6 +77,11 @@ function App() {
           <input name='url' type='text' value={url} onChange={handleChange} />
           <label htmlFor='name'>URL:</label>
           <input name='name' type='text' value={name} onChange={handleChange} />
+        <form>
+          <label htmlFor='url'>URL:</label>
+          <input name='url' type='text' />
+          <label htmlFor='name'>URL:</label>
+          <input name='name' type='text' />
           <button type='submit'>Shrink It</button>
         </form>
       </header>
