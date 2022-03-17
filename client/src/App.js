@@ -61,6 +61,11 @@ function App() {
           <input name='url' type='text' value={url} onChange={handleChange} />
           <label htmlFor='name'>URL:</label>
           <input name='name' type='text' value={name} onChange={handleChange} />
+        <form>
+          <label htmlFor='url'>URL:</label>
+          <input name='url' type='text' />
+          <label htmlFor='name'>URL:</label>
+          <input name='name' type='text' />
           <button type='submit'>Shrink It</button>
         </form>
       </header>
@@ -68,6 +73,8 @@ function App() {
         {active && <div>{message}</div>}
         <h2>Preview your link:</h2>
         <p>http://www.shrinkenator.com/{name}</p>
+        <h2>Preview your link:</h2>
+        <p>http://www.shrinkenator.com/{/* link name here */}</p>
       </main>
     </div>
   );
