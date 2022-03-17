@@ -1,7 +1,7 @@
 # Shrinkenator
 url shortener
 
-
-npm run dev
+/root/client - npm start
+/root - npm run dev
 
 process.env -> mongodb uri
