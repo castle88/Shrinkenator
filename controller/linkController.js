@@ -1,13 +1,15 @@
 const Link = require('../model/LinkModel')
 
 const getLink = async (req, res, next) => {
-	const id = req.params.id
 	try{
-		const link = await Link.findOne({id})
-		console.log(link)
+		res.status(200).json({
+			success: true,
+			message: 'get the link'
+		})
 	}catch(err){
-		console.log(err)
+		res.status(400)
+		next(err)
 	}
 }
 
-module.exports = { getLink }
+module.exports = { getLink, }
