@@ -12,6 +12,7 @@ const getLink = async (req, res, next) => {
 	}
 }
 
+
 const postLink = async (req, res, next) => {
 	const { url, name } = req.body
 	try{
