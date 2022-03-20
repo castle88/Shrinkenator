@@ -3,7 +3,7 @@ const Link = require('../model/LinkModel')
 const getLink = async (req, res, next) => {
 	const id = req.params.id
 	try{
-		const url = await Link.find({name: id})
+		const url = await Link.findOne({name: id})
 		
 		if(!url.url) {
 			res.status(404)
