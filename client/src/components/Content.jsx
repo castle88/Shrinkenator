@@ -3,8 +3,8 @@ import React from "react";
 export default function Content({ name, response, link }) {
   const { active, message } = response;
 
-  const handleClick = (e) => {
-    window.location.href = link.url;
+  const handleClick = () => {
+    window.location = `http://${link.url}`;
   };
 
   return (
