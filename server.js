@@ -10,6 +10,6 @@ connectDB()
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-app.use('/link', linkRoutes)
+app.use('/api/link', linkRoutes)
 
 app.listen(port, () => console.log(`Server running port: ${port}`))

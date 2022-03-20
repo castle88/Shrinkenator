@@ -1,11 +1,20 @@
 const Link = require('../model/LinkModel')
 
 const getLink = async (req, res, next) => {
+	const id = req.params.id
 	try{
-		res.status(200).json({
-			success: true,
-			message: 'get the link'
-		})
+		const url = await Link.find({name: id})
+		
+		if(!url.url) {
+			res.status(404)
+			return next(new Error(`Could not find ${id}`))
+		}else{
+			res.status(200).json({
+				success: true,
+				message: 'get the link',
+				url,
+			})
+		}
 	}catch(err){
 		res.status(400)
 		next(err)
