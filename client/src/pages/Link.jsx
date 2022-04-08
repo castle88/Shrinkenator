@@ -7,7 +7,7 @@ export default function Link() {
 
   const getLink = async () => {
     try {
-      const response = await fetch(`http://localhost:2121/api/link/${link}`);
+      const response = await fetch(`/api/link/${link}`);
       const data = await response.json();
       console.log(data);
 
