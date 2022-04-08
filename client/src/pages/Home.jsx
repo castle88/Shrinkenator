@@ -69,7 +69,7 @@ export default function Home() {
         return handleMessage("please enter a nickname for your url");
       }
 
-      const res = await fetch("http://localhost:2121/api/link", {
+      const res = await fetch("/api/link", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
