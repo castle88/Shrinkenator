@@ -9,9 +9,9 @@ export default function Content({ name, response, link }) {
 
   return (
     <main>
-      {active && <div>{message}</div>}
-      <h2>Preview your link:</h2>
-      <p>http://www.shrinkenator.com/{name}</p>
+      {active && <div className="message">{message}</div>}
+      <h2>SHRINKENATED:</h2>
+      <p>http://www.shrinkenator.herokuapp.com/{name}</p>
       {link.active && <button onClick={handleClick}>Visit {link.name}</button>}
     </main>
   );

@@ -1,11 +1,16 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-header{
+body {
+  font-family: "Roboto", sans-serif;
+}
+header {
   padding: 2rem 0;
-  background: blue;
+  background: rgb(18, 104, 99);
+  color: white;
+  font-weight: 700;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -15,18 +20,51 @@ header > p {
   margin: 1rem 0;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
 }
-input{
+input {
+  all: unset;
   margin: 1rem 0;
+  padding: 0.5rem;
+  background: rgb(214, 230, 229);
+  color: rgb(18, 104, 99);
+  border-radius: 5px;
+}
+input:active,
+input:focus {
+  border: 2px solid rgb(9, 66, 63);
+}
+button {
+  color: rgb(18, 104, 99);
+  font-weight: 800;
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 2px solid rgb(9, 66, 63);
+  cursor: pointer;
 }
 
-main{
+main {
   min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+main h2,
+main p,
+.message {
+  color: rgb(18, 104, 99);
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.message,
+main p {
+  font-size: 1.2rem;
+  color: rgb(9, 66, 63);
 }
